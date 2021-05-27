@@ -495,7 +495,7 @@ Using this information the Topology Manager calculates the optimal hint for the 
 1. 拓扑管理器所能处理的最大 NUMA 节点个数是 8。若 NUMA 节点数超过 8，
    枚举可能的 NUMA 亲和性并为之生成提示时会发生状态爆炸。
 2. 调度器不支持拓扑功能，因此可能会由于拓扑管理器的原因而在节点上进行调度，然后在该节点上调度失败。
-3. 设备管理器和 CPU 管理器时能够采纳拓扑管理器 HintProvider 接口的唯一两个组件。
+3. 设备管理器和 CPU 管理器是能够采纳拓扑管理器 HintProvider 接口的唯一两个组件。
    这意味着 NUMA 对齐只能针对 CPU 管理器和设备管理器所管理的资源实现。
    内存和大页面在拓扑管理器决定 NUMA 对齐时都还不会被考虑在内。
 
